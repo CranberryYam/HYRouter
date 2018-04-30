@@ -78,7 +78,7 @@ class MyViewController:UIViewController, RouterController {
 ```
 
 ## DebugViewController
-<img src="https://github.com/CranberryYam/HYRouter/blob/master/Asset/DebugLauncher2.png">
+<img src="https://github.com/CranberryYam/HYRouter/blob/master/Asset/DebugLauncher.png">
 
 ```swift
 AppDelegate.swift
