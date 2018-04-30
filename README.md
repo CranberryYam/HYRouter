@@ -19,3 +19,78 @@ If you use traditinal navigation methods offered by Apple, you can't decouple tw
 - [x] Support ViewController with storyboard or without storyboard
 - [x] Configure the main UITabBarController with a dictionary
 - [x] Setup entries for all ViewController in the dubug mode
+
+
+# Installation
+
+You can install HYRouter via CocoaPods by adding it to your `Podfile`:
+```
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+pod 'HYRouter'
+```
+
+And run `pod install`.
+
+
+# Usage
+
+## Router
+### 1 - Implement the RouterController protocol
+```swift
+import HYRouter
+
+class MyViewController:UIViewController, RouterController {
+    var params: [String : Any]?
+}
+```
+All data from previous ViewController will be here
+
+### 2 - Prepare the data needed to pass
+```swift
+let param = RouterParams()
+param["videoUrl"] = "https://video.com/id=123"
+```
+### 3 - Call Navigate method
+```swift
+navigate(controllerName: String, params:RouterParams,isPresent: Bool)
+```
+- **controllerName**: When the next ViewController use storyboard, the controllerName is the stroyboard identifier. When doesn't use storyboard, the controllerName is the ViewController class name
+- **params**: data is configured in a dictionary structure
+- **isPresent**: True for presentViewController, false for pushViewController
+
+### 4 - Receive the data
+```swift
+import HYRouter
+
+class MyViewController:UIViewController, RouterController {
+    var params: [String : Any]? {
+      didSet {
+              guard let params = params else { return }
+              if params.keys.contains("videoUrl")
+              { self.urlString = params["videoUrl"] as? String }
+          }
+    }
+}
+```
+
+## DebugViewController
+```swift
+AppDelegate.swift
+import HYRouter
+
+let vcs = ["Record","ActityHisController","History"]
+window?.rootViewController = DebugLaucher.tableController(controllers: vcs)
+```
+
+## Main UITabBarController
+```swift
+AppDelegate.swift
+import HYRouter
+
+let vcs = ["Record","ActityHisController","History"]
+window?.rootViewController = DebugLaucher.tabController(controllers: vcs)
+```
