@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class RouterTabController: UITabBarController,RouterController {
+open class RouterTabController: UITabBarController,RouterController {
     
     public var params: [String : Any]? {
         didSet {
