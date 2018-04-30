@@ -8,14 +8,14 @@
 
 import UIKit
 
-class DebugLaucher {
-    static func tableController(controllers:[String],navigateTitle:String="Debug") -> UINavigationController {
+public class DebugLaucher {
+    public static func tableController(controllers:[String],navigateTitle:String="Debug") -> UINavigationController {
         let vc = RouterTableController()
         vc.controllers = controllers
         vc.title = navigateTitle
         return UINavigationController(rootViewController: vc)
     }
-    static func tabController(controllers:[String], params:[String:Any]=[String:Any]()) -> UITabBarController {
+    public static func tabController(controllers:[String], params:[String:Any]=[String:Any]()) -> UITabBarController {
         let vc = RouterTabController()
         var newParams = params
         newParams["controllers"] = controllers

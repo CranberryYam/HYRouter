@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RouterTabController: UITabBarController,RouterController {
+public class RouterTabController: UITabBarController,RouterController {
     
-    var params: [String : Any]? {
+    public var params: [String : Any]? {
         didSet {
             guard let params = params else { return }
             if params.keys.contains("controllers") {

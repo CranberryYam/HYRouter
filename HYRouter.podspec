@@ -23,4 +23,5 @@ Pod::Spec.new do |s|
   # s.resources = "Resources/*.png"
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
+  s.ios.deployment_target = "8.0"
 end

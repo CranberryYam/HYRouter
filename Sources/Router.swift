@@ -15,7 +15,7 @@ public typealias RouterParams = [String:Any]
 /**
   If use HYRouter, all of viewcontrollers have to use this protocol
 */
-protocol RouterController:class {
+public protocol RouterController:class {
     /**
     Accepted all the data passed by last Controller.
      
@@ -34,7 +34,7 @@ protocol RouterController:class {
     var params:[String:Any]? { get set }
 }
 
-extension RouterController where Self:UIViewController {
+public extension RouterController where Self:UIViewController {
     /**
      Init a ViewController
      
@@ -96,7 +96,7 @@ extension RouterController where Self:UIViewController {
 }
 
 //MARK: UIVIewController init controller from storyboard or classname
-extension UIViewController {
+public extension UIViewController {
     /**
      A convinient method from HYRouter, directly init the Controller by its ID
     */
