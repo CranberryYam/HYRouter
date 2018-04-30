@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HYRouter"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "HYRouter is a Swift Router framework."
   s.homepage     = "https://github.com/CranberryYam/HYRouter"
   s.license      = { :type => "MIT", :file => "LICENSE" }
