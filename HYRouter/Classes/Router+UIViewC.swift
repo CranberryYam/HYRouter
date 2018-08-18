@@ -4,7 +4,7 @@
 //
 //  Created by Honglin Yi on 8/17/18.
 //
-
+import UIKit
 
 //MARK: UIVIewController init controller from storyboard or classname
 public extension UIViewController {
