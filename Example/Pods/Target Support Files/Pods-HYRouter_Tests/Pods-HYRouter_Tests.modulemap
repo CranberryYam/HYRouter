@@ -1,0 +1,6 @@
+framework module Pods_HYRouter_Tests {
+  umbrella header "Pods-HYRouter_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

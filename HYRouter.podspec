@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HYRouter"
-  s.version      = "0.0.2"
+  s.version      = "1.0.0"
   s.summary      = "HYRouter is a Swift Router framework."
   s.homepage     = "https://github.com/CranberryYam/HYRouter"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.source       = { :git => "https://github.com/CranberryYam/HYRouter.git", :tag => "#{s.version}" }
 
-  s.source_files = "Sources/**/*.swift"
+  s.source_files = "HYRouter/Classes/**/*"
   # s.exclude_files = "Classes/Exclude"
 
   s.frameworks   = 'UIKit', 'Foundation'

@@ -1,0 +1,16 @@
+PODS:
+  - HYRouter (0.0.2)
+
+DEPENDENCIES:
+  - HYRouter (from `../`)
+
+EXTERNAL SOURCES:
+  HYRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HYRouter: 5d4670acfef4443ade9d7fb1117ab953c00dd1b0
+
+PODFILE CHECKSUM: 9b168a9e372836fba1785e07f5f2a1423892a163
+
+COCOAPODS: 1.5.3
